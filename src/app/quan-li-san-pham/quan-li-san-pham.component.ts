@@ -10,6 +10,7 @@ export class QuanLiSanPhamComponent implements OnInit {
 
   danhSachSanPham:any = [];
   SanPham:any = {};
+  mauDong:boolean;
 
   constructor() { }
 

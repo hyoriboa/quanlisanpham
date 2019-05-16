@@ -26,25 +26,15 @@
         <th>Giá</th>
       </tr>
     </thead>
-    <tbody *ngFor="let item of danhSachSanPham; let STT = index">
-      <ng-container *ngIf="(STT + 1)%2 ===0 ">
-          <tr [ngClass]="{'mauDong': true}">
-              <td>{{ STT + 1 }}</td>
-              <td>{{ item.masp }}</td>
-              <td>{{ item.tensp }}</td>
-              <td>{{ item.giasp }}</td>
-            </tr>
+    <tbody>
+      <ng-container *ngFor="let item of danhSachSanPham; let STT = index">
+        <tr [ngClass]="{'mauDong': (STT + 1)%2 === 0}">
+            <td>{{ STT + 1 }}</td>
+            <td>{{ item.masp }}</td>
+            <td>{{ item.tensp }}</td>
+            <td>{{ item.giasp }}</td>
+        </tr>
       </ng-container>
-      <ng-container *ngIf="(STT + 1)%2 !==0 ">
-          <tr [ngClass]="{'mauDong': false}">
-              <td>{{ STT + 1 }}</td>
-              <td>{{ item.masp }}</td>
-              <td>{{ item.tensp }}</td>
-              <td>{{ item.giasp }}</td>
-            </tr>
-      </ng-container>
-      
-      
     </tbody>
   </table>
 </div>
